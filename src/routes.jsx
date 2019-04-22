@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer.jsx';
 
 import HomePage from './pages/HomePage/HomePage.jsx';
 import Auth from './pages/Auth/Auth.jsx';
+import Registration from './pages/Registration/Registration.jsx';
 
 const CustomRoute = ({ component: Component, custom, ...rest }) => (
   <div>
@@ -23,6 +24,7 @@ const Routes = () => (
         <Switch>
           <CustomRoute exact path="/" component={HomePage} custom={true} />
           <CustomRoute path="/auth" component={Auth} custom={false} />
+          <CustomRoute path="/registration" component={Registration} custom={false} />
         </Switch>
     </BrowserRouter>
 );

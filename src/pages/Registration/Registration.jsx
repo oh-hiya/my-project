@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 import {Container, Row} from 'react-bootstrap';
 
 // Styles
-import './Auth.scss';
+import './Registration.scss';
 import AuthWrapper from '../../components/Auth/AuthWrapper/AuthWrapper.jsx';
 import InputText from '../../components/FormElements/InputText/InputText.jsx';
 import Button from '../../components/FormElements/Button/Button.jsx';
 import VideoBackground from '../../components/VideoBackground/VideoBackground.jsx';
 
-class Auth extends Component {
+class Registration extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -28,14 +28,16 @@ class Auth extends Component {
             <Row className="justify-content-center">
               <AuthWrapper>
                 <img className="logo" src="./img/logo.png" alt=""/>
-                <span className="auth-name">Авторизация</span>
+                <span className="auth-name">Регистрация</span>
                 <form>
+                  <InputText placeholder="Имя" name="username" type="text" autocomplete={"off"}  />
                   <InputText placeholder="Логин" name="username" type="text" autocomplete={"off"}  />
                   <InputText placeholder="Пароль" name="password" type="password" autocomplete={"off"} />
-                  <Button label="Войти" />
+                  <InputText placeholder="Повторите пароль" name="password" type="password" autocomplete={"off"} />
+                  <Button label="Зарегистрироваться" />
                 </form>
                 <div className="sign-up-label">
-                  Нет аккаунта? <Link to="/registration">Зарегистрироваться</Link>
+                  Уже есть аккаунт? <Link to="/auth">Войти</Link>
                 </div>
               </AuthWrapper>
             </Row>
@@ -46,4 +48,4 @@ class Auth extends Component {
   }
 }
 
-export default Auth;
+export default Registration;
