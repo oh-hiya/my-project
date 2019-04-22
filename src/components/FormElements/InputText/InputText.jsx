@@ -23,10 +23,10 @@ class InputText extends Component {
   componentDidMount() {}
 
   render() {
-    const {placeholder, name, type} = this.props;
+    const {placeholder, name, type, autocomplete = "on"} = this.props;
     const {showPassword} = this.state;
     return (<div className="input-text">
-      <input type={!!showPassword ? 'text' : type} name={name} id={name} required="required"/>
+      <input type={!!showPassword ? 'text' : type} name={name} id={name} autocomplete={autocomplete} required="required"/>
       <label htmlFor={name}>{placeholder}</label>
       <div className="line"></div>
       {

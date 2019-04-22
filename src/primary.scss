@@ -4,4 +4,13 @@ body{
   #root{
     min-width: 320px;
   }
+
+  a{
+    color: black;
+    font-weight: 500;
+
+    &:hover{
+      color: black;
+    }
+  }
 }
